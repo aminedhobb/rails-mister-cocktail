@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="holidaylinkApp" data-google-key="AIzaSyCh9vDJvaFFPEJiz-H49xCZdcnt_wDfEXQ">
+<head>
+  <meta http-equiv="content-language" content="fr" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Bongo Bongo (Bar / pub) - Split (Žnjan)</title>
+<meta property="og:title" content="Bongo Bongo (Bar / pub) - Split (Žnjan)">
+<meta property="og:description" content="Bongo Bongo (Bar / pub) - Split (Žnjan), Dalmatie Centrale, Croatie. Auteur: Holiday-Link.com. Regardez photos, vidéos, commentaires et classements.">
+<meta property="og:url" content="https://www.holiday-link.com/fr/croatie/dalmatie-entrale/split/bongo-bongo-606">
+<meta property="og:image" content="https://www.holiday-link.com/data/article-video/1852927414976119.jpg">
+<meta property="og:video" content="">
+<meta property="og:video:type" content="application/x-shockwave-flash">
+<meta property="og:type" content="business.business">
+<meta property="business:contact_data:street_address" content="Šetalište pape Ivana Pavla II">
+<meta property="business:contact_data:postal_code" content="21000">
+<meta property="business:contact_data:locality" content="Split">
+<meta property="business:contact_data:country_name" content="Croatie">
+<meta property="place:location:latitude" content="43.502997494167">
+<meta property="place:location:longitude" content="16.479349715833">
+<meta property="fb:app_id" content="797521160287319">
+<meta property="og:site_name" content="Holiday-Link.com">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="hr_HR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="bs_BA">
+<meta property="og:locale:alternate" content="sr_RS">
+<meta property="og:locale:alternate" content="sl_SI">
+<meta property="og:locale:alternate" content="mk_MK">
+<meta property="og:locale:alternate" content="hu_HU">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@HolidayLinkCom">
+<meta name="twitter:creator" content="@HolidayLinkCom">
+<meta name="twitter:title" content="Bongo Bongo (Bar / pub) - Split (Žnjan)">
+<meta name="twitter:description" content="Bongo Bongo (Bar / pub) - Split (Žnjan), Dalmatie Centrale, Croatie. Auteur: Holiday-Link.com. Regardez photos, vidéos, commentaires et classements.">
+<meta name="twitter:image" content="https://www.holiday-link.com/data/holiday/bongo-bongo-606-split_149027556001.jpg">
+<meta name="description" content="Bongo Bongo (Bar / pub) - Split (Žnjan), Dalmatie Centrale, Croatie. Auteur: Holiday-Link.com. Regardez photos, vidéos, commentaires et classements.">
+<meta name="author" content="Holiday-Link.com">
+<link href="https://www.holiday-link.com/croatia/middle-dalmatia/split/bongo-bongo-606" rel="alternate" hreflang="en_US">
+<link href="https://www.holiday-link.com/hr/hrvatska/srednja-dalmacija/split/bongo-bongo-606" rel="alternate" hreflang="hr_HR">
+<link href="https://www.holiday-link.com/de/kroatien/mitteldalmatien/split/bongo-bongo-606" rel="alternate" hreflang="de_DE">
+<link href="https://www.holiday-link.com/es/croacia/dalmacia-central/split/bongo-bongo-606" rel="alternate" hreflang="es_ES">
+<link href="https://www.holiday-link.com/it/croazia/dalmazia-centrale/spalato/bongo-bongo-606" rel="alternate" hreflang="it_IT">
+<link href="https://www.holiday-link.com/pl/chorwacja/srodkowa-dalmacja/split/bongo-bongo-606" rel="alternate" hreflang="pl_PL">
+<link href="https://www.holiday-link.com/cz/chorvatsko/stredni-dalmacie/split/bongo-bongo-606" rel="alternate" hreflang="cs_CZ">
+<link href="https://www.holiday-link.com/ba/hrvatska/srednja-dalmacija/split/bongo-bongo-606" rel="alternate" hreflang="bs_Latn_BA">
+<link href="https://www.holiday-link.com/rs/hrvatska/srednja-dalmacija/split/bongo-bongo-606" rel="alternate" hreflang="sr_Latn_RS">
+<link href="https://www.holiday-link.com/si/hrvaska/srednja-dalmacija/split/bongo-bongo-606" rel="alternate" hreflang="sl_SI">
+<link href="https://www.holiday-link.com/mk/hrvatska/sredna-dalmacija/split/bongo-bongo-606" rel="alternate" hreflang="mk_MK">
+<link href="https://www.holiday-link.com/hu/horvatorszag/kozep-dalmacia/split/bongo-bongo-606" rel="alternate" hreflang="hu_HU">
+<link href="https://www.holiday-link.com/at/kroatien/mitteldalmatien/split/bongo-bongo-606" rel="alternate" hreflang="de_AT">
+<link href="https://www.holiday-link.com/gb/croatia/middle-dalmatia/split/bongo-bongo-606" rel="alternate" hreflang="en_GB">
+<link href="https://d12byr01exjiy9.cloudfront.net/assets/front/all-7a112202bb2339d078682cbda44b03ac.css" rel="stylesheet">
+<link href="https://d12byr01exjiy9.cloudfront.net/assets/front/bootstrap-2cdae894bfe45f459260b8df0fe396f7.css" rel="stylesheet">
+<script src="//www.google.com/recaptcha/api.js?hl=fr" async defer></script><meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="ZVRTX0pGR29TAyIoADUiFy4iYTsbJSVcVRU6LwwvEzwWGjc3Pik0Hw==">
+<meta name="google-site-verification" content="e_9_2gYWxJxqnLOZ0wYc09szMbAswuRuT-X0WMDfUYs" />
+<meta name="msvalidate.01" content="89842416FCF96872D5529C213DCD3CC4" />
+</head>
+<body>
+    <script type="text/javascript">var recaptchaCallback = function(response){jQuery('#articlecommentform-recaptcha').val(response);};
+var recaptchaExpiredCallback = function(){jQuery('#articlecommentform-recaptcha').val('');};</script>    
+<div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+FB.init({
+  appId      : '797521160287319',
+  xfbml      : true,
+  version    : 'v2.2'
+});
+};
+
+(function(d, s, id){
+ var js, fjs = d.getElementsByTagName(s)[0];
+ if (d.getElementById(id)) {return;}
+ js = d.createElement(s); js.id = id;
+ js.src = "//connect.facebook.net/fr_FR/sdk.js";
+ js.async = true;
+ fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+    <div class="wrap">
+        <nav id="w36" class="navbar navbar-default"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w36-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="/fr"><img src="/img/logo.gif" alt=""><span>present your destination, country | region (island) | town</span></a></div><div id="w36-collapse" class="collapse navbar-collapse"><ul id="w37" class="navbar-nav navbar-right nav"><li class="share" ng-style="{opacity: shareLoaded ? '' : '0',position: shareLoaded ? '' : 'absolute'}">
+            <div class="fb-like" data-href="https://www.facebook.com/HolidayLinkCom/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" lang="fr"></a>
+            <div class="g-follow" data-annotation="bubble" data-height="20" data-href="https://plus.google.com/109409462208897560819" data-rel="publisher"></div>
+        </li><li class="share" ng-init="shareLoaded=0" ng-mouseover="shareLoaded=1" ng-style="{display: !shareLoaded ? '' : 'none'}"><div class="fb fbb-like"><button type="submit"><span class="pluginButtonIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 216" class="pluginButtonIconSVG"><path fill="white" d="
+               M204.1 0H11.9C5.3 0 0 5.3 0 11.9v192.2c0 6.6 5.3 11.9 11.9
+               11.9h103.5v-83.6H87.2V99.8h28.1v-24c0-27.9 17-43.1 41.9-43.1
+               11.9 0 22.2.9 25.2 1.3v29.2h-17.3c-13.5 0-16.2 6.4-16.2
+               15.9v20.8h32.3l-4.2 32.6h-28V216h55c6.6 0 11.9-5.3
+               11.9-11.9V11.9C216 5.3 210.7 0 204.1 0z"></path></svg></span></button>J'aime</div><div class="fb fbb-share">Partager</div><div class="tweet"><i></i><span class="label" id="l">Tweet</span></div><div class="gplus"><div style="margin:2px 0 0 2px;" class="s7"><div style="width:14px;height:14px;" class="ima Nr Pr"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" class="u7"><path d="M12.5,6.2V4.7h-1.1v1.5H9.8v1.1h1.5v1.5h1.1V7.3H14V6.2H12.5z"></path><path d="M4.4,6.1v1.7h2.3c-0.2,1-1.1,1.8-2.3,1.8C3,9.6,1.8,8.4,1.8,7S3,4.4,4.4,4.4C5,4.4,5.6,4.6,6,5l1.3-1.3 C6.5,3.1,5.6,2.6,4.4,2.6C2,2.6,0,4.6,0,7s2,4.4,4.4,4.4c2.5,0,4.2-1.8,4.2-4.3c0-0.3,0-0.7-0.1-1C8.5,6.1,4.4,6.1,4.4,6.1z"></path></svg></div></div><span>Partager</span></div></li>
+</li>
+<li><a href="/fr/login" data-open-login="/fr/ajax/login">Connexion</a></li>
+<li class="langs dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Français <span class="caret"></span></a><ul id="w38" class="dropdown-menu"><li><a class="lang-en" href="/croatia/middle-dalmatia/split/bongo-bongo-606" tabindex="-1">English</a></li>
+<li><a class="lang-hr" href="/hr/hrvatska/srednja-dalmacija/split/bongo-bongo-606" tabindex="-1">Hrvatski</a></li>
+<li><a class="lang-de" href="/de/kroatien/mitteldalmatien/split/bongo-bongo-606" tabindex="-1">Deutsch</a></li>
+<li><a class="lang-es" href="/es/croacia/dalmacia-central/split/bongo-bongo-606" tabindex="-1">Español</a></li>
+<li><a class="lang-it" href="/it/croazia/dalmazia-centrale/spalato/bongo-bongo-606" tabindex="-1">Italiano</a></li>
+<li><a class="lang-pl" href="/pl/chorwacja/srodkowa-dalmacja/split/bongo-bongo-606" tabindex="-1">Polski</a></li>
+<li><a class="lang-cz" href="/cz/chorvatsko/stredni-dalmacie/split/bongo-bongo-606" tabindex="-1">Česky</a></li>
+<li><a class="lang-ba" href="/ba/hrvatska/srednja-dalmacija/split/bongo-bongo-606" tabindex="-1">Bosanski</a></li>
+<li><a class="lang-rs" href="/rs/hrvatska/srednja-dalmacija/split/bongo-bongo-606" tabindex="-1">Srpski</a></li>
+<li><a class="lang-si" href="/si/hrvaska/srednja-dalmacija/split/bongo-bongo-606" tabindex="-1">Slovenščina</a></li>
+<li><a class="lang-mk" href="/mk/hrvatska/sredna-dalmacija/split/bongo-bongo-606" tabindex="-1">Mакедонски</a></li>
+<li><a class="lang-hu" href="/hu/horvatorszag/kozep-dalmacia/split/bongo-bongo-606" tabindex="-1">Magyar</a></li>
+<li><a class="lang-at" href="/at/kroatien/mitteldalmatien/split/bongo-bongo-606" tabindex="-1">Deutsch (AT)</a></li>
+<li><a class="lang-gb" href="/gb/croatia/middle-dalmatia/split/bongo-bongo-606" tabindex="-1">English (UK)</a></li></ul></li></ul></div></div></nav>        <form id="search-form" action="/fr/chercher" method="GET" role="search">
+    <div class="container">
+        <div class='homepage_search'>
+        
+<div class="slider slider_wrapper clearfix slider-articleCategory" id="article-category-slick">
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/restaurants"      title="Split Restaurants" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-restaurant"></i>
+          Restaurants      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/boites-de-nuit-discotheques"      title="Split Boîtes de nuit / Discothèques" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-night-disco-club"></i>
+          Boîtes de nuit / Discothèques      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/bars-pubs"      title="Split Bars / pubs" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-bar-pub"></i>
+          Bars / pubs      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/evenements"      title="Split Événements" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-event"></i>
+          Événements      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/sites-attractions"      title="Split Sites / Attractions" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-sight-attraction"></i>
+          Sites / Attractions      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/musees-galeries-theatres-operas"      title="Split Musées / Galeries / Théâtres / Opéras" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-museum-gallery-theatre-opera"></i>
+          Musées / Galeries / Théâtres / Opéras      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/lepiceries-services"      title="Split L'épiceries / Services" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-shop-service"></i>
+          L'épiceries / Services      </a>
+    </div>
+      <div class="item">
+      <a             style="">
+          <i class=" icon-article-cat-national-nature-park"></i>
+          Parcs nationaux / Parcs naturels      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/plages"      title="Split Plages" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-beach"></i>
+          Plages      </a>
+    </div>
+      <div class="item">
+      <a             style="">
+          <i class=" icon-article-cat-ski-resort"></i>
+          Stations de ski      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/sites-des-excursions"      title="Split Sites des excursions" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-excursion-site"></i>
+          Sites des excursions      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/fast-food-patisseries"      title="Split Fast food / Pâtisseries" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-fast-food-pastry-shop"></i>
+          Fast food / Pâtisseries      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/festivals"      title="Split Festivals" data-toggle="tooltip"      style="">
+          <i class="icon-article-cat-festival"></i>
+          Festivals      </a>
+    </div>
+      <div class="item">
+      <a             style="">
+          <i class=" icon-article-cat-zoo-aquarium"></i>
+          Zoos / Aquariums      </a>
+    </div>
+      <div class="item">
+      <a             style="">
+          <i class=" icon-article-cat-casino"></i>
+          Casinos      </a>
+    </div>
+      <div class="item">
+      <a             style="">
+          <i class=" icon-article-cat-park-garden"></i>
+          Parcs / Jardins      </a>
+    </div>
+  </div>
+
+          <div class="col-sm-8 col-sm-push-2">
+            <div class="searchMainHeader">
+
+                <div class="form-group field-q required">
+<input type="text" id="headerSearchQ" name="q" placeholder="Exemple: Gaga (bar / pub) - Split">
+</div>
+                <button type="button" id="headerSearchSubmit" class="headerSearchSubmit"></button>
+            </div>
+          </div>
+
+        
+<div class="slider slider_wrapper clearfix -accommodationCategory" id="accommodation-category-slick">
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/hebergement-prive"      title="Split Hébergement privé" data-toggle="tooltip"      style="">
+          <i class="icon-acc-cat-vacation-rentals"></i>
+          Hébergement privé      </a>
+    </div>
+      <div class="item">
+      <a href="/fr/croatie/dalmatie-entrale/split/hotels"      title="Split Hôtels - Comparez les prix de 100+ portails d'hébergements, réservez un hébergement avec le meilleur prix" data-toggle="tooltip"      style="">
+          <i class="icon-acc-cat-hotels"></i>
+          Hôtels      </a>
+    </div>
+  </div>
+        </div>
+    </div>
+
+    </form>
+        <div class="container">
+          <div class="row content">
+            <div class="col-lg-6 col-lg-push-3 col-sm-8 mainCenter">
+                        <div class="rcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb"><li><a href="/fr">Accueil</a></li>
+<li><a href="/fr/croatie">Croatie</a></li>
+<li><a href="/fr/croatie/dalmatie-entrale">Dalmatie Centrale</a></li>
+<li><a href="/fr/croatie/dalmatie-entrale/split">Split</a></li>
+<li class="active">Bongo Bongo</li>
+</ul>            </div>
+                        
+<div class="article data-article-id" data-article-id="606">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headerBlock clearfix">
+              <span class="headerBlock_icon" style="background-image:url(/data/article-category-icon/1443794254-1443011638-1417124720-nightclub.png)"></span>
+              <h1 class="headerBlock_title -double top_title">Bongo Bongo                      (Bar / pub) -
+                      Split                      (Žnjan)                <span class='headerBlock_mapIcon'>
+                  <a class="gmap-trigger map-secondary-trigger" data-gmap-id="606">
+                    <i class='icon gmap-icon'></i>
+                  </a>
+                </span>
+              </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+          <div class="well">
+
+            
+<div class="slider slider_wrapper" id="slider606">
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type="iframe"
+                        rel="gallery_606"
+                        href="https://video.xx.fbcdn.net/v/t43.1792-2/17872049_1277405542309167_8979580317220208640_n.mp4?_nc_cat=0&efg=eyJybHIiOjM1OTUsInJsYSI6MTAyNCwidmVuY29kZV90YWciOiJzdmVfaGQifQ%3D%3D&rl=3595&vabr=2397&oh=7f79a767d6dbf955f8389043f45b684d&oe=5AD21BD4">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article-video/s-1852927414976119.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Vidéo 1"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Vidéo 1">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type="iframe"
+                        rel="gallery_606"
+                        href="https://video.xx.fbcdn.net/v/t43.1792-2/17907902_681121432096084_9055567939477962752_n.mp4?_nc_cat=0&efg=eyJybHIiOjM3OTMsInJsYSI6MTAyNCwidmVuY29kZV90YWciOiJzdmVfaGQifQ%3D%3D&rl=3793&vabr=2529&oh=7556abc4d5c8b184e456f9199d256de1&oe=5AD23598">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article-video/s-1855723144696546.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Vidéo 2"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Vidéo 2">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type="iframe"
+                        rel="gallery_606"
+                        href="https://video.xx.fbcdn.net/v/t43.1792-2/17908045_1466322333420562_759005722900955136_n.mp4?_nc_cat=0&efg=eyJybHIiOjM4NTksInJsYSI6MTAyNCwidmVuY29kZV90YWciOiJzdmVfaGQifQ%3D%3D&rl=3859&vabr=2573&oh=312eab569b6812612754fd759832f806&oe=5AD1FE78">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article-video/s-1855722164696644.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Vidéo 3"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Vidéo 3">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type="iframe"
+                        rel="gallery_606"
+                        href="https://video.xx.fbcdn.net/v/t43.1792-2/18075287_304158556671836_8693027920366534656_n.mp4?_nc_cat=0&efg=eyJybHIiOjM1NDksInJsYSI6MTAyNCwidmVuY29kZV90YWciOiJzdmVfaGQifQ%3D%3D&rl=3549&vabr=2366&oh=bb5cec8ec4f3afaf59127bebbd13b364&oe=5AD243D8">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article-video/s-1859466590988868.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Vidéo 4"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Vidéo 4">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type="iframe"
+                        rel="gallery_606"
+                        href="https://video.xx.fbcdn.net/v/t43.1792-2/18075895_1760660154243999_3876490687977357312_n.mp4?_nc_cat=0&efg=eyJybHIiOjM5NTIsInJsYSI6MTAyNCwidmVuY29kZV90YWciOiJzdmVfaGQifQ%3D%3D&rl=3952&vabr=2635&oh=07d89218017080579fca945a08c1d0bc&oe=5AD148D4">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article-video/s-1864107600524767.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Vidéo 5"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Vidéo 5">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149027556001.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149027556001.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 1"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 1">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149027556002.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149027556002.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 2"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 2">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149027556106.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149027556106.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 3"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 3">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149027556107.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149027556107.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 4"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 4">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149027556109.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149027556109.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 5"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 5">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149027556110.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149027556110.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 6"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 6">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149144118621.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149144118621.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 7"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 7">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149204631323.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149204631323.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 8"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 8">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149204631324.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149204631324.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 9"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 9">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149265117120.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149265117120.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 10"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 10">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149265117121.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149265117121.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 11"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 11">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149265117222.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149265117222.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 12"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 12">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149325587122.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149325587122.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 13"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 13">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_149386082822.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_149386082822.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 14"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 14">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_150051448519.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_150051448519.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 15"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 15">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_150051448520.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_150051448520.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 16"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 16">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_150051448521.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_150051448521.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 17"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 17">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_150051448623.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_150051448623.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 18"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 18">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_150232766821.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_150232766821.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 19"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 19">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_150777084822.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_150777084822.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 20"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 20">
+                    </a>
+                </div>
+            </div>
+                <div>
+                <div class='slider_customItem'>
+                    <a class="fancybox"
+                        data-fancybox-type=""
+                        rel="gallery_606"
+                        href="https://d12byr01exjiy9.cloudfront.net/images/article/bongo-bongo-606-split_152047503422.jpg">
+                            <img hl-unveil data-unveil="https://d12byr01exjiy9.cloudfront.net/images/article/s-bongo-bongo-606-split_152047503422.jpg"
+                                 data-toggle="tooltip"
+                                 title="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 21"
+                                 alt="Bongo Bongo (Bar / pub) - Split (Žnjan) - Image 21">
+                    </a>
+                </div>
+            </div>
+    </div>
+
+            <div class="row">
+                <div class="author">
+                    <div class="col-xs-8">
+                        <h4>
+                            Holiday-Link.com (Facebook page),&nbsp;
+                            <span class="dateCreated">23 mars 2017</span>
+                        </h4>
+                    </div>
+
+                    <div class='col-xs-4'>
+                        <div class="-rating"><i class="icon ratingStar-icon"></i><span class="-score"
+                            >0</span>/10</div>
+                    </div>
+
+                    <div class='col-xs-12'>
+                        <ul class="authorDetails">
+                                                            <li>Adresse:&nbsp;<strong>Šetalište pape Ivana Pavla II</strong></li>
+                                                                                        <li>Tél&nbsp;<strong>0953625323</strong></li>
+                                                                                                                <li id="article_work_hours_link_606" class="articleWorkHoursLink" style="display: none"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tabpanel">
+                <div class='article_tab-wrapper'>
+                    <div class='row'>
+                        <div class="col-md-8 col-md-push-4 text-right">
+                            <div class="feedbackInfo">
+                                                                    <span class="-infoType">Doit visiter(0)
+                                        <i class="icon happy-icon"></i></span>
+                                                                    <span class="-infoType">Visiter(0)
+                                        <i class="icon smiling-icon"></i></span>
+                                                                    <span class="-infoType">Traverser(0)
+                                        <i class="icon sad-icon"></i></span>
+                                                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-md-pull-8">
+                            <ul class="nav nav-tabs">
+                                <li role="presentation" class="active"><a href="#article606" aria-controls="article" role="tab"
+                                    data-toggle="tab">Article</a></li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="desc tab-content">
+                    <div class="tab-pane  active" role="tabpanel" id="article606">
+                                                    <div class="article-body translate-Google" style="padding-bottom:0">
+                                <iframe src="/iFrame-article?slug=bongo-bongo&lang=fr&content_type=full&language=fr" class="iframe" scrolling="no" frameborder="0" style="width:100%;"></iframe>
+                            </div>
+                                            </div>
+                    <div class="tab-pane news" id="news606">
+                                        </div>
+                    <div class='footerLinks'>
+                        <div class='row'>
+                            <div class='col-xs-12'>
+                                <div class='article_links-left footerLinks_mapLink'>
+                                    <a class='more gmap-trigger map-secondary-trigger' data-gmap-id="606">
+                                        Montrer sur la carte&nbsp;<i class='fa fa-external-link-square'></i>
+                                    </a>
+                                </div>
+
+                                <div class='article_links-right'>
+                                                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+
+          </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="article-work-hours-modal_606" class="fade modal" role="dialog" tabindex="-1">
+<div class="modal-dialog ">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+Heures de travail
+</div>
+<div class="modal-body">
+<div class="row">
+    <div id='preview_work_hours_frontend_606' class='col-xs-12'>
+        <table class="preview_work_hours"></table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fermez</button>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+<div ng-controller="MapModalCtrl">
+    <a id="map-neutral-trigger" class="hidden" href="" ng-click="openModalNeutral()"></a>
+    
+<div class="modal-backdrop fade" ng-class="{'show in': showModal, 'fade': !showModal}" style="display: none"></div>
+<div  class="modal mapModal" role="dialog" tabindex="-1" ng-class="{'show in': showModal, 'fade': !showModal}"  >
+	<div class="modal-dialog modal-lg" click-outside-element="closeModal()">
+		<div class="modal-content">
+			<div class="modal-header">
+			    <button type="button" class="close" ng-click="closeModal()">×</button>
+			    			</div>
+			<div class="modal-body ">
+			        
+<div ng-if="render" ng-controller="LocationMapCtrl" ng-init="map.center={latitude:'43.502997494167',longitude:'16.479349715833'};map.zoom=16;markerTypes={'transportation':{'plane':{visible: true},'port':{visible: true},'marina':{visible: true}},'article':{'1':{visible: true},'2':{visible: true},'3':{visible: true},'4':{visible: true},'5':{visible: true},'6':{visible: true},'7':{visible: true},'8':{visible: true},'9':{visible: true},'10':{visible: true},'11':{visible: true},'12':{visible: true},'13':{visible: true},'14':{visible: true},'15':{visible: true},'16':{visible: true}},'accommodation':{'1':{visible: true},'2':{visible: true},'3':{visible: true},'4':{visible: true},'5':{visible: true},'7':{visible: true},'8':{visible: true}}};search='none'; initMarkers();">
+    <script type="text/ng-template" id="controlmap.tpl.html">
+        <div class="btn-group map_legend" ng-cloak>
+                            <div class="btn-group dropdown">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" dropdown-menu>
+                        <i class='icon transport_icon'></i></i>Transport                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu gmap-markers-menu noclose" role="menu">
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="transportation_plane_checked=true" ng-click="controlMapClick(&#039;transportation&#039;, &#039;plane&#039;)">                                            Avion                                            ({{numValues['transportation']['plane']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="transportation_port_checked=true" ng-click="controlMapClick(&#039;transportation&#039;, &#039;port&#039;)">                                            Le port                                            ({{numValues['transportation']['port']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="transportation_marina_checked=true" ng-click="controlMapClick(&#039;transportation&#039;, &#039;marina&#039;)">                                            Marinas, amarrages et de mouillages                                            ({{numValues['transportation']['marina']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div class="btn-group dropdown">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" dropdown-menu>
+                        <i class='icon tFacilities_icon'></i></i>Installations touristiques                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu gmap-markers-menu noclose" role="menu">
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_1_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;1&#039;)">                                            Restaurant                                            ({{numValues['article']['1']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_2_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;2&#039;)">                                            Boîte de nuit / Discothèque                                            ({{numValues['article']['2']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_3_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;3&#039;)">                                            Bar / pub                                            ({{numValues['article']['3']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_4_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;4&#039;)">                                            Événement                                            ({{numValues['article']['4']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_5_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;5&#039;)">                                            Site / Attraction                                            ({{numValues['article']['5']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_6_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;6&#039;)">                                            Musée / Galerie / Théâtre / Opéra                                            ({{numValues['article']['6']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_7_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;7&#039;)">                                            L'épicerie / Service                                            ({{numValues['article']['7']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_8_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;8&#039;)">                                            Parc national / Nature parc                                            ({{numValues['article']['8']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_9_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;9&#039;)">                                            Plage                                            ({{numValues['article']['9']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_10_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;10&#039;)">                                            Station de ski                                            ({{numValues['article']['10']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_11_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;11&#039;)">                                            Site d'excursion                                            ({{numValues['article']['11']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_12_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;12&#039;)">                                            Fast food / Pâtisserie                                            ({{numValues['article']['12']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_13_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;13&#039;)">                                            Festival                                            ({{numValues['article']['13']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_14_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;14&#039;)">                                            Zoo / Aquarium                                            ({{numValues['article']['14']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_15_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;15&#039;)">                                            Casino                                            ({{numValues['article']['15']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="article_16_checked=true" ng-click="controlMapClick(&#039;article&#039;, &#039;16&#039;)">                                            Parc / Jardin                                            ({{numValues['article']['16']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div class="btn-group dropdown">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" dropdown-menu>
+                        <i class='icon accommodations_icon'></i></i>Hébergement                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu gmap-markers-menu noclose" role="menu">
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="accommodation_1_checked=true" ng-click="controlMapClick(&#039;accommodation&#039;, &#039;1&#039;)">                                            Hébergement privé                                            ({{numValues['accommodation']['1']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="accommodation_2_checked=true" ng-click="controlMapClick(&#039;accommodation&#039;, &#039;2&#039;)">                                            Hôtels                                            ({{numValues['accommodation']['2']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="accommodation_3_checked=true" ng-click="controlMapClick(&#039;accommodation&#039;, &#039;3&#039;)">                                            Location de bateaux                                            ({{numValues['accommodation']['3']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="accommodation_4_checked=true" ng-click="controlMapClick(&#039;accommodation&#039;, &#039;4&#039;)">                                            Camping                                            ({{numValues['accommodation']['4']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="accommodation_5_checked=true" ng-click="controlMapClick(&#039;accommodation&#039;, &#039;5&#039;)">                                            Mini cruisers et Gulets                                            ({{numValues['accommodation']['5']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="accommodation_7_checked=true" ng-click="controlMapClick(&#039;accommodation&#039;, &#039;7&#039;)">                                            Excursions / tours de ville                                            ({{numValues['accommodation']['7']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a ng-click="$event.stopPropagation()">
+                                    <div class="checkbox" ng-click="$event.stopPropagation()">
+                                        <label>
+                                            <input type="checkbox" value="1" checked ng-init="accommodation_8_checked=true" ng-click="controlMapClick(&#039;accommodation&#039;, &#039;8&#039;)">                                            Tours rondes                                            ({{numValues['accommodation']['8']}})
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                    </div>
+    </script>
+
+    <ui-gmap-google-map
+        ng-init="defaultMarker={latitude:'43.502997494167',longitude:'16.479349715833'}"
+        center="map.center"
+        draggable="true"
+        options="{scrollwheel:false, styles:[{'featureType':'poi','stylers':[{'visibility':'off'}]},{'featureType':'poi.attraction','stylers':[{'visibility':'on'}]},{'featureType':'poi.government','stylers':[{'visibility':'on'}]},{'featureType':'poi.medical','stylers':[{'visibility':'on'}]},{'featureType':'poi.park','stylers':[{'visibility':'on'}]},{'featureType':'poi.place_of_worship','stylers':[{'visibility':'on'}]},{'featureType':'poi.school','stylers':[{'visibility':'on'}]},{'featureType':'poi.sports_complex','stylers':[{'visibility':'on'}]}]}"
+        events="map.events"
+        control="map.control"
+        zoom="map.zoom">
+                <ui-gmap-map-control
+            template="controlmap.tpl.html"
+            position="top-right"
+            controller="LocationMapControlCtrl"
+            index="0">
+        </ui-gmap-map-control>
+                                    <ui-gmap-markers
+    models="markers['transportation']['plane']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['transportation']['plane'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <div class='popup_content'>
+                <h3 class='popup_title'><span class='text-muted'>Avion:<br></span>{{infoWindowData.title}}</h3>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            <ui-gmap-markers
+    models="markers['transportation']['port']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['transportation']['port'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <div class='popup_content'>
+                <h3 class='popup_title'><span class='text-muted'>Le port:<br></span>{{infoWindowData.title}}</h3>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            <ui-gmap-markers
+    models="markers['transportation']['marina']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['transportation']['marina'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <div class='popup_content'>
+                <h3 class='popup_title'><span class='text-muted'>Marinas, amarrages et de mouillages:<br></span>{{infoWindowData.title}}</h3>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                                                
+<ui-gmap-markers
+    models="markers['article']['1']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['1'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Restaurant</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['2']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['2'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Boîte de nuit / Discothèque</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['3']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['3'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Bar / pub</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['4']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['4'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Événement</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['5']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['5'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Site / Attraction</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['6']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['6'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Musée / Galerie / Théâtre / Opéra</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['7']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['7'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>L'épicerie / Service</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['8']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['8'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Parc national / Nature parc</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['9']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['9'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Plage</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['10']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['10'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Station de ski</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['11']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['11'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Site d'excursion</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['12']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['12'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Fast food / Pâtisserie</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['13']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['13'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Festival</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['14']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['14'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Zoo / Aquarium</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['15']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['15'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Casino</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            
+<ui-gmap-markers
+    models="markers['article']['16']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['article']['16'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>{{infoWindowData.location}}<br>
+                    <span>Parc / Jardin</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                                                <ui-gmap-markers
+    models="markers['accommodation']['1']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['accommodation']['1'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' style="height:100px !important;" onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title -accommodation'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>
+                    {{infoWindowData.supplierType}}: {{infoWindowData.ownerType}}<br>
+                    {{infoWindowData.objectClass}}: {{infoWindowData.unitTypes}}<br>
+                    {{infoWindowData.location}}<br>
+                    <span>Hébergement privé</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            <ui-gmap-markers
+    models="markers['accommodation']['2']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['accommodation']['2'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' style="height:100px !important;" onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title -accommodation'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>
+                    {{infoWindowData.supplierType}}: {{infoWindowData.ownerType}}<br>
+                    {{infoWindowData.objectClass}}: {{infoWindowData.unitTypes}}<br>
+                    {{infoWindowData.location}}<br>
+                    <span>Hôtels</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            <ui-gmap-markers
+    models="markers['accommodation']['3']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['accommodation']['3'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' style="height:100px !important;" onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title -accommodation'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>
+                    {{infoWindowData.supplierType}}: {{infoWindowData.ownerType}}<br>
+                    {{infoWindowData.objectClass}}: {{infoWindowData.unitTypes}}<br>
+                    {{infoWindowData.location}}<br>
+                    <span>Location de bateaux</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            <ui-gmap-markers
+    models="markers['accommodation']['4']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['accommodation']['4'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' style="height:100px !important;" onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title -accommodation'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>
+                    {{infoWindowData.supplierType}}: {{infoWindowData.ownerType}}<br>
+                    {{infoWindowData.objectClass}}: {{infoWindowData.unitTypes}}<br>
+                    {{infoWindowData.location}}<br>
+                    <span>Camping</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            <ui-gmap-markers
+    models="markers['accommodation']['5']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['accommodation']['5'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' style="height:100px !important;" onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title -accommodation'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>
+                    {{infoWindowData.supplierType}}: {{infoWindowData.ownerType}}<br>
+                    {{infoWindowData.objectClass}}: {{infoWindowData.unitTypes}}<br>
+                    {{infoWindowData.location}}<br>
+                    <span>Mini cruisers et Gulets</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            <ui-gmap-markers
+    models="markers['accommodation']['7']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['accommodation']['7'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' style="height:100px !important;" onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title -accommodation'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>
+                    {{infoWindowData.supplierType}}: {{infoWindowData.ownerType}}<br>
+                    {{infoWindowData.objectClass}}: {{infoWindowData.unitTypes}}<br>
+                    {{infoWindowData.location}}<br>
+                    <span>Excursions / tours de ville</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            <ui-gmap-markers
+    models="markers['accommodation']['8']"
+    idKey="id"
+    coords="'self'"
+    click="'onClicked'"
+    ng-if="markerTypes['accommodation']['8'].visible"
+    doCluster="false"
+    icon="'icon'">
+    <ui-gmap-windows
+        idKey="infoWindowData.id"
+        show="show"
+        closeClick="'closeClick'"
+        ng-cloak
+        options="'infoWindowOptions'">
+        <div ng-non-bindable class='map_popup' style="height:100px !important;" onclick="bringInfoWindowToFront(this);">
+            <a href="{{infoWindowData.url}}" class='popup_image' style="background-image:url('{{infoWindowData.photo}}')"></a>
+            <div class='popup_content'>
+                <h3 class='popup_title -accommodation'><a href="{{infoWindowData.url}}">{{infoWindowData.title}}</a></h3>
+                <div class='popup_summary'>
+                    {{infoWindowData.supplierType}}: {{infoWindowData.ownerType}}<br>
+                    {{infoWindowData.objectClass}}: {{infoWindowData.unitTypes}}<br>
+                    {{infoWindowData.location}}<br>
+                    <span>Tours rondes</span>
+                </div>
+            </div>
+        </div>
+    </ui-gmap-windows>
+</ui-gmap-markers>
+                            <ui-gmap-markers
+    models="groupMarkers"
+    coords="'self'"
+    doCluster="false"
+    options="'options'"
+    icon="'icon'"
+    click="'onClicked'">
+</ui-gmap-markers>    </ui-gmap-google-map>
+    <div class="clearfix"></div>
+</div>
+    			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<div class='commerc_wrapper -longBottom'>
+        <!-- hl_article_top -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-4040058244123872"
+         data-ad-slot="1202986144" data-ad-format="auto"></ins>
+    <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</div>
+
+<div class="visible-xs visible-sm text-center shareMobile">
+    <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" lang="' . $twitterLanguage .'">Tweet</a>
+
+    <div class="g-plus" data-action="share" data-annotation="none"></div>
+</div>
+
+<div class="comments">
+  <div class="row">
+      <div class="col-sm-12">
+        <div class="headerBlock clearfix">
+          <h4 class="headerBlock_title">Bongo Bongo / Commentaires&nbsp;<i
+            class="fa fa-comments"></i>
+<!--            git-->
+          </h4>
+        </div>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+
+        <!-- Leave a comment form -->
+        <div class="well commentsContainer">
+            
+<form id="leaveReply" action="/fr/ajax/comment?type=article&amp;id=606" method="post">
+<input type="hidden" name="_csrf" value="ZVRTX0pGR29TAyIoADUiFy4iYTsbJSVcVRU6LwwvEzwWGjc3Pik0Hw==">
+
+
+<div class="animate-hide field-articlecommentform-recommendation" ng-hide="!redactor_active">
+<label class="control-label">Qu'est-ce que vous voulez recommander aux autres?</label>
+<div>
+<input type="hidden" name="ArticleCommentForm[recommendation]" value=""><div id="articlecommentform-recommendation"><label class="radio-inline"><input type="radio" name="ArticleCommentForm[recommendation]" value="must_see"> Doit visiter</label>
+<label class="radio-inline"><input type="radio" name="ArticleCommentForm[recommendation]" value="see"> Visiter</label>
+<label class="radio-inline"><input type="radio" name="ArticleCommentForm[recommendation]" value="skip"> Traverser</label></div>
+<p class="help-block help-block-error"></p>
+</div>
+
+</div>
+
+
+<div ng-hide="!redactor_active"class="row">
+    <div class="col-sm-12 marginB-10 marginT-10">
+        <label class="control-label">Votre classement:</label>
+        <span class="clearfix"></span>
+        <span class="rating">
+                                                <span class="rating-numeric inactive">
+                                            </span>
+                                <span class="star"
+                      data-star-rating="10"></span>
+                                            <span class="star"
+                      data-star-rating="9"></span>
+                                            <span class="star"
+                      data-star-rating="8"></span>
+                                            <span class="star"
+                      data-star-rating="7"></span>
+                                            <span class="star"
+                      data-star-rating="6"></span>
+                                            <span class="star"
+                      data-star-rating="5"></span>
+                                            <span class="star"
+                      data-star-rating="4"></span>
+                                            <span class="star"
+                      data-star-rating="3"></span>
+                                            <span class="star"
+                      data-star-rating="2"></span>
+                                            <span class="star"
+                      data-star-rating="1"></span>
+                    </span>
+    </div>
+</div>
+
+
+<div class="animate-hide field-articlecommentform-rating" ng-hide="true">
+<label class="control-label" for="articlecommentform-rating">Rating</label>
+<select id="articlecommentform-rating" class="form-control" name="ArticleCommentForm[rating]">
+<option value="">No rating</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+
+<p class="help-block help-block-error"></p>
+</div><div class="animate-hide field-articlecommentform-rating" ng-hide="!redactor_active">
+<p class="help-block help-block-error"></p>
+</div>
+            <div class=" field-articlecommentform-translation_active-0">
+<input type="hidden" id="articlecommentform-translation_active-0" class="form-control" name="ArticleCommentForm[translation_active][0]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-1">
+<input type="hidden" id="articlecommentform-translation_active-1" class="form-control" name="ArticleCommentForm[translation_active][1]" value="0">
+</div>            <div id="tsfr"
+             class="tab-pane active">
+            <div class=" field-articlecommentform-translation_active-2">
+<input type="hidden" id="articlecommentform-translation_active-2" class="form-control" name="ArticleCommentForm[translation_active][2]" value="1">
+</div>
+            <div class="form-group animate-hide -expander redactor_editor_content field-commentlang-2-body required" ng-model="redactor_active" ng-init="redactor_active=false" ng-click="redactor_active=true">
+
+<textarea id="w33" name="CommentLang[2][body]"></textarea>
+
+<p class="help-block help-block-error"></p>
+</div>
+            <div class=" field-commentlang-2-translate_method">
+<input type="hidden" id="commentlang-2-translate_method" class="form-control" name="CommentLang[2][translate_method]">
+</div>        </div>
+            <div class=" field-articlecommentform-translation_active-3">
+<input type="hidden" id="articlecommentform-translation_active-3" class="form-control" name="ArticleCommentForm[translation_active][3]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-4">
+<input type="hidden" id="articlecommentform-translation_active-4" class="form-control" name="ArticleCommentForm[translation_active][4]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-5">
+<input type="hidden" id="articlecommentform-translation_active-5" class="form-control" name="ArticleCommentForm[translation_active][5]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-6">
+<input type="hidden" id="articlecommentform-translation_active-6" class="form-control" name="ArticleCommentForm[translation_active][6]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-7">
+<input type="hidden" id="articlecommentform-translation_active-7" class="form-control" name="ArticleCommentForm[translation_active][7]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-8">
+<input type="hidden" id="articlecommentform-translation_active-8" class="form-control" name="ArticleCommentForm[translation_active][8]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-9">
+<input type="hidden" id="articlecommentform-translation_active-9" class="form-control" name="ArticleCommentForm[translation_active][9]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-10">
+<input type="hidden" id="articlecommentform-translation_active-10" class="form-control" name="ArticleCommentForm[translation_active][10]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-11">
+<input type="hidden" id="articlecommentform-translation_active-11" class="form-control" name="ArticleCommentForm[translation_active][11]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-12">
+<input type="hidden" id="articlecommentform-translation_active-12" class="form-control" name="ArticleCommentForm[translation_active][12]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-13">
+<input type="hidden" id="articlecommentform-translation_active-13" class="form-control" name="ArticleCommentForm[translation_active][13]" value="0">
+</div>            <div class=" field-articlecommentform-translation_active-14">
+<input type="hidden" id="articlecommentform-translation_active-14" class="form-control" name="ArticleCommentForm[translation_active][14]" value="0">
+</div>    
+<div class="row marginB-20 marginT-20 animate-hide">
+    <div class="col-sm-12">
+        <div class="checkbox">
+            <label class="">
+                <div class=" field-articlecommentform-generalterms required">
+<input type="hidden" name="ArticleCommentForm[generalTerms]" value="0"><input type="checkbox" id="articlecommentform-generalterms" name="ArticleCommentForm[generalTerms]" value="1"><p class="help-block help-block-error"></p>
+</div>                Je suis d'accord avec&nbsp;
+                <a data-terms-modal data-modal="termsModal">
+                    conditions générales de publication                </a>.
+            </label>
+        </div>
+    </div>
+</div>
+
+<div class="animate-hide field-articlecommentform-recaptcha" ng-hide="!redactor_active">
+
+<input type="hidden" id="articlecommentform-recaptcha" name="ArticleCommentForm[reCaptcha]"><div class="g-recaptcha" data-sitekey="6LfG9AETAAAAALJcg5IRLTRIUpef3c8BK1swQSY5" data-callback="recaptchaCallback" data-expired-callback="recaptchaExpiredCallback"></div>
+
+<p class="help-block help-block-error"></p>
+</div>
+
+<div class="row animate-hide" ng-hide="!redactor_active">
+    <div class="col-sm-4">
+        <button type="submit" id="submitComment" class="btn btn-lg btn-block btn-success">Créez</button>    </div>
+    <div class="col-sm-2">
+        <a class="btn btn-link btn-block btn-lg cancelComment" ng-click="redactor_active=false">Annuler</a>
+    </div>
+</div>
+
+</form>
+<!-- Modal Leave Reply submition -->
+<div class="modal fade leaveReply" id="modal_leaveReply" tabindex="-1" role="dialog"
+     aria-labelledby="leaveReply-label" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="leaveReply-label">Il semble que vous ne soyez pas connecté!</h3>
+                <h4>Comment voulez-vous procéder?</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a class="-signNo" href="">
+                            <i class="fa fa-user-secret"></i>
+                            <h4>Commentaire anonyme</h4>
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a class="-signIn" href="" data-open-login="/fr/ajax/login">
+                            <i class="fa fa-user"></i>
+                            <h4>Connexion</h4>
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a class="-signUp" href="" data-open-login="/fr/ajax/login"
+                            data-active-tab="registration">
+                            <i class="fa fa-user-plus"></i>
+                            <h4>Inscription</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+        <span><i class="fa fa-info-circle"></i>Si vous choisissez "Connexion" ou "Inscription", votre commentaire sera automatiquement attribué à vous.</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success notice modal -->
+<div class="modal fade success" id="modal_commentSuccess" tabindex="-1" role="dialog"
+     aria-labelledby="leaveReply-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title text-brand-green" id="commentSuccess-label">Votre commentaire a été soumis avec succès et sera publié après validation par l'administrateur!</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="termsModal" class="fade modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title" id="myModalLabel">Conditions générales de publication</h4>
+</div>
+<div class="mCustomScrollbar modal-body">
+
+<div class="modal_content">
+    <p><strong>Conditions générales et remarques</strong></p>
+    <br>
+    <p><strong>1. Site Internet</strong><br>
+        Le site Internet www.holiday-link.com est un site interactif où les visiteurs peuvent publier des articles, actualités, photos et vidéos traitant des thèmes de tourisme, restauration, culture et divertissement. Les informations peuvent être entrées par les propriétaires, directeurs, employés, offices de tourisme, habitants, touristes, et tous ceux qui souhaitent faire connaître un contenu spécifique au public.
+Ce site permet à d’autres visiteurs d'évaluer l'attractivité d’un certain contenu, et d’écrire des commentaires. Les visiteurs qui se connectent à la page et souhaitent publier des informations sur un contenu, ou promouvoir un service touristique, deviennent utilisateurs ou fournisseurs et ils acceptent les conditions générales stipulées ici, et doivent agir en conformité avec les conditions générales (les conditions générales ne sont pas applicables s’il ne s’agit que d’une visite de ce site Internet). On devient utilisateur en se connectant par le biais d'un nom d'utilisateur et un mot de passe. L'utilisateur est obligé d'entrer les données d'accès correctes, prénom, nom et adresse. Les contenus entrés par l'utilisateur seront signés avec un surnom de son choix, tandis que les données personnelles seront utilisées conformément à la déclaration de confidentialité.  Les personnes sous l'âge de 13 ans ne sont pas autorisées à entrer le contenu. Les conditions générales peuvent être changées de temps à autre, et si l'utilisateur ou le fournisseur n'est pas d'accord avec les conditions générales modifiées, il peut supprimer son contenu.</p>
+    <br>
+    <p><strong>2. Contenu</strong><br>
+        Cette page n’est pas un média publiant des contenus éditoriaux. Les visiteurs peuvent publier des contenus qui donnent au public des informations culturelles et éducatives sur les installations touristiques, culturelles et de restauration. Le but de ce site est de recueillir des informations qui font connaître l’offre touristique, culturelle et  gastronomique d’un certain endroit (ville, région, pays) aux  touristes ainsi qu’aux habitants locaux. La publication des informations sur des contenus différents est complètement gratuite. En plus des contenus touristiques sur les pages web, les fournisseurs de service touristiques différents peuvent entrer et faire de la publicité pour leurs services. Ceux-ci sont ci-après dénommés les fournisseurs. Les utilisateurs et les fournisseurs sont seuls responsables de la publication de leur contenu conformément à la déclaration de responsabilité.</p>
+    <br>
+    <p><strong>3. Obligations des utilisateurs</strong><br>
+        Chaque utilisateur doit utiliser le site conformément aux conditions générales énoncées ici.
+En publiant un certain texte, commentaire, photo ou vidéo sur la page, l'utilisateur garantit que les informations publiées sont vraies, et que celles-ci ne soient pas protégées par des droits d’auteur de tiers. Chaque utilisateur est moralement et matériellement responsable de la publication de contenu. Il est interdit de copier des textes appartenant à d’autres sites Internet. Les contenus sont vérifiés et approuvés par les administrateurs. Holiday-Link.com a le droit de ne pas montrer le contenu qu'il juge inapproprié, faux ou offensif.
+Les propriétaires, directeurs ou employés d'établissements de restauration (par exemple : un restaurant) ont le droit de réponse aux articles et commentaires traitant de leur établissement ou service. Les propriétaires ont le droit de demander que l’on supprime le texte sur leur établissement ou service, si ce texte est jugé inapproprié. La plainte peut être déposée ici : complain@holiday-link.com.
+En publiant un contenu, l'utilisateur donne à Holiday-Link.com et à ses filiales une autorisation (droit d’auteur) exclusive, gratuite, transférée définitivement et irrévocable d'utiliser, reproduire, modifier, adapter, traduire, distribuer,  publier et afficher publiquement le contenu entré.</p>
+    <br>
+    <p><strong>4. Obligations des fournisseurs de services touristiques (hébergement et autres services)</strong><br>
+        La société de Holiday-Link.com d.o.o agit en tant que site de publicité et non pas comme un tour-opérateur ou une agence de voyage intermédiaire. Les fournisseurs de services touristiques qui entrent leurs capacités sur le site paient pour la publicité selon le modèle qu'ils choisissent. Toute interaction portant sur la réservation d’un hébergement et l’utilisation d’un autre service touristiques a lieu directement entre les fournisseurs et les clients. Les clients (visiteurs) reservent un hébergement ou un autre service directement auprès des fournisseurs, et leur paient les services convenus. Les fournisseurs sont responsable de tous les données, images et prix entrés. Les fournisseurs garantissent qu'ils disposent de toutes les autorisations nécessaires pour effectuer les services qu'ils offrent, et d'opérer en conformité avec les lois de leur pays d'origine. En achetant certain service, le client accepte les conditions générales du fournisseur chez lequel il l’a acheté. Holiday-Link va vérifier chaque fournisseur avant la publication de ses établissements et services sur le site.</p>
+    <br>
+    <p><strong>5. La déclaration de responsabilité</strong><br>
+        Les informations entrées par les utilisateurs et les fournisseurs peut être incorrectes. Holiday-Link.com ne vérifie pas des informations, photos et films entrés par les utilisateurs, et ne peut en garantir l'exactitude et décline toute responsabilité pour toute information incorrecte. Si vous remarquez un certain mensonge, une inexactitude ou un contenu incomplet, veuillez nous contacter à l'adresse email: complain@holiday-link.com
+L’utilisateur est responsable pour toute information qu’il a entrée.
+Les fournisseurs promouvant les services touristiques via le site agissent en tant qu’ entrepreneurs indépendants. Ils entrent de manière indépendante les informations sur leurs services, images et prix. Holiday-Link.com ne vérifie pas les données entrées, et décline toute responsabilité à l'égard des erreurs qui peuvent se produire lors de l'écriture. Les fournisseurs doivent veiller à ce qu’ils aient tous les permis concernant les services offerts, et se conformer à toutes les lois et réglementations de leur pays d'origine.
+Le visiteur du site conclut un accord portant sur un certain service directement avec le fournisseur (selon les données entrées par le fournisseur en tant qu’entrepreneur indépendant), et lui paye directement. C’est pourquoi Holiday-Link.com décline toute responsabilité pour les problèmes liés à des certaines réservations.</p>
+    <br>
+    <p><strong>6. Déclaration de confidentialité</strong><br>
+        Les utilisateurs et les fournisseurs doivent remplir certaines informations (prénom et nom, email, adresse, téléphone, etc.) lors de la connexion sur le site Internet. Holiday-Link.com garantit de garder ces informations comme secret, et de ne pas les transmettre à des tiers. Holiday-Link.com peut utiliser les emails des utilisateurs et fournisseurs pour envoyer les informations nécessaires et  les publicités.</p>
+    <br>
+    <p><strong>7. Déclaration relative aux cookies</strong><br>
+        Un cookie est un fichier texte qui contient une petite quantité d'informations téléchargées sur votre ordinateur ou appareil mobile lorsque vous visitez un site. Holiday-Link.com utilise des cookies pour permettre à ses visiteurs une meilleure expérience sur le site. Il est possible aussi de recueillir automatiquement certaines informations lors de la visite du site Holiday-Link.com.</p>
+    <br>
+    <p><strong>8. Juridiction du tribunal</strong><br>
+        En cas de litige éventuel relatif au site holiday-link.com,  le Tribunal de Split et la loi croate sont compétents.</p>
+</div>
+
+
+</div>
+
+</div>
+</div>
+</div>
+        </div>
+
+      <div class="well commentsContainer">
+
+        <div id="w35" class="list-view"><div class="empty">Aucun résultat trouvé.</div></div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+            <div class="col-lg-3 col-lg-pull-6 col-sm-4 sideLeft">
+                                <div class='mapLocationContainer hidden-xs'>
+    <div class='row'>
+        <div class='col-sm-12'>
+            <div class='mapLocation_wrapper'>
+                <a href="#" class="gmap-trigger map-secondary-trigger" data-gmap-id="606">
+                    <img src='/data/map/croatia_middle-dalmatia_split.png' alt=''>
+                </a>
+                <a href="#" class="enlargeMapButton gmap-trigger map-secondary-trigger">
+                    <i class="fa fa-plus-circle"></i>
+                    Carte touristique                </a>
+            </div>
+        </div>
+    </div>
+</div>
+                                
+                <span class="btn btn-primary btn-big browse-accommodation-button">Hébergement et offre</span><div class="well nav-locations"><ul id="w43" class="nav-stacked nav"><li><a href="/fr/croatie/dalmatie-entrale/split/hebergement-prive" title="Hébergement privé Split - Réservez directement avec le propriétaire, une agence locale ou gestionnaire exclusif" data-toggle="tooltip">Hébergement privé - Réservez directement avec le propriétaire, une agence locale ou gestionnaire exclusif</a></li>
+<li><a href="/fr/croatie/dalmatie-entrale/split/hotels" title="Hôtels Split - Comparez les prix de 100+ portails d&#039;hébergements, réservez un hébergement avec le meilleur prix" data-toggle="tooltip">Hôtels - Comparez les prix de 100+ portails d&#039;hébergements, réservez un hébergement avec le meilleur prix</a></li></ul></div>
+                <div class='hidden-xs commerc_wrapper -short'>
+                    
+                    <!-- hl_col_left -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-4040058244123872"
+                         data-ad-slot="2679719348"
+                         data-ad-format="auto"></ins>
+                    <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-4 sideRight">
+                <a class="btn btn-success btn-big" href="/backend/fr/accommodation-wizard/index" rel="nofollow" data-open-login="/fr/ajax/login">Publiez une offre touristique</a><div class="well publish">
+Propriétaires d'appartements, chambres, maisons, pansions, hôtels, campings etc. Publiez votre offre <strong>GRATUITEMENT</strong>. Le paiement ne sera effectué qu'après la réception d'une demande spécifique ou une réservation réalisée.</div>
+                <a class="btn btn-success btn-big" href="/fr/article/create?l=39" rel="nofollow" data-open-login="/fr/ajax/login">Publiez un article</a><div class="well publish">
+<strong>Propriétaires, directeurs, employés</strong>
+restaurants, boîtes de nuit, événement et autres activités, écrivez une critique sur la carte touristique. Publiez les articles, images et vidéos <strong>GRATUITEMENT</strong>.<p>
+<strong>Voyageurs</strong>
+Vous avez visité un restaurant, un bar ou une attraction intéressante? Vous avez participé à un événement amusant? Partagez vos expériences positives! Ecrivez un article, publiez une vidéo ou les photos que vous avez prises.</p>
+</div>
+                    <div class="headerBlock_title -side">Endroits recommandés</div>
+    <div class="well nav-locations"><ul id="w43" class="nav-stacked nav"><li><a href="https://www.holiday-link.com/fr/croatie/croatie-centrale/zagreb">Zagreb</a></li>
+<li><a href="https://www.holiday-link.com/fr/croatie/dalmatie-entrale">Dalmatie Centrale</a></li>
+<li><a href="https://www.holiday-link.com/fr/croatie/brac">Île de Brac</a></li>
+<li><a href="https://www.holiday-link.com/fr/croatie/dalmatie-entrale/split">Split</a></li></ul></div>        <a href="/fr/croatie/destinations" class="btn btn-success btn-big">Croatie - Toutes les destinations</a>
+    
+
+            <div class='hidden-xs commerc_wrapper -short'>
+                
+                <!-- hl_col_right -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4040058244123872"
+                     data-ad-slot="4156452544"
+                     data-ad-format="auto"></ins>
+                <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+            </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="push"></div>
+    </div>
+
+        <p class="foot_locations hidden-xs">
+      <a href="https://www.holiday-link.com/fr/croatie">Croatie</a>, <a href="https://www.holiday-link.com/fr/montenegro">Monténégro</a>    </p>
+
+    <footer class="footer">
+    <div class="container">
+
+       <ul id="w43" class="nav"><li><a href="https://www.holiday-link.com/fr/conditions-generales">Conditions générales</a></li>
+<li><a href="https://www.holiday-link.com/fr/impressum">Impressum</a></li>
+<li><a href="https://www.holiday-link.com/fr/prix-des-services">​Prix des services</a></li></ul>        <div>
+        Retrouvez-nous sur <a href="https://www.facebook.com/HolidayLinkCom" target="_blank">Facebook</a> et <a href="https://plus.google.com/109409462208897560819" target="_blank">Google+</a>        </div>
+        <div>Voyage, vacances, installations touristiques, hôtels, hébergement. Toutes les informations à un seul endroit.</div>
+        <div><a href="/fr">www.holiday-link.com</a> - tous droits réservés</div>
+        <div>design by:  <a href="http://dizajnist.com" target="_blank" rel="nofollow">dizajnist.com</a></div>
+    </div>
+    </footer>
+    
+<script>
+window.___gcfg = {lang: 'fr'};
+
+(function() {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/platform.js'; po.async = true;
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=true;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67312512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';js.async=true;fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Storing url's so they can be accessed from Js -->
+<script>
+  var UrlRep = {};
+  UrlRep.Base = '';
+  UrlRep.SearchHeader = '/fr/search/header';
+  UrlRep.SearchIndex = '/fr/chercher';
+</script>
+
+    <script src="https://d12byr01exjiy9.cloudfront.net/assets/front/jquery-37af94bff8b1fdd7a0bea8126f338bb2.js"></script>
+<script src="https://d12byr01exjiy9.cloudfront.net/assets/front/all-43c2718bc41c89190cda6fdf0a3d9b6f.js"></script>
+<script src="https:////pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://d12byr01exjiy9.cloudfront.net/assets/front/2e5b18a7/lang/fr.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+var $container5ad0d801e549f =  $('#slider606');
+$container5ad0d801e549f.slick({"slidesToShow":5,"slidesToScroll":1,"responsive":[{"breakpoint":1024,"settings":{"infinite":true,"slidesToShow":4}},{"breakpoint":810,"settings":{"centerMode":true,"centerPadding":"40px","infinite":true,"slidesToShow":3}},{"breakpoint":500,"settings":{"centerMode":false,"centerPadding":"40px","infinite":true,"slidesToShow":2}}]});
+
+
+
+    $('.fancybox').fancybox({
+        beforeShow: function () {
+            var imgAlt = $(this.element).find('img').attr('alt');
+            $('.fancybox-image').attr('alt', imgAlt);
+        },
+        helpers: {
+            overlay: {
+              locked: false
+            }
+        }
+    });
+
+    $.fn.slickSliderEmpty = function(container) {
+        // remove all slides
+        container.slick('slickRemove', null, null, true);
+    }
+
+    $.fn.slickSliderAddItem = function(container, href, src, type) {
+
+        var item = '<div> \
+            <div class="slider_customItem"> \
+                <a class="fancybox" \
+                    data-fancybox-type="' + type + '" \
+                    href="' + href + '"> \
+                        <img hl-unveil data-unveil="' + src + '" alt=""> \
+                </a> \
+            </div> \
+        </div>';
+
+        container.slick('slickAdd', item);
+
+    }
+
+
+jQuery('#article-work-hours-modal_606').modal({"show":false});
+
+jQuery(document).on('hidden.bs.modal', '#modal_leaveReply', function (e) {
+    if (jQuery('#modal_leaveReply').attr('data-comment-id') && jQuery('#modal_leaveReply').attr('data-comment-id') != '') {
+        jQuery.ajax({
+            method: 'GET',
+            url: '/fr/ajax/delete-comment#!',
+            data: {
+                id : jQuery('#modal_leaveReply').attr('data-comment-id')
+            },
+            dataType: 'json',
+            success: function(ret) { }
+        });
+    }
+})
+
+var closeReplyModal = function () {
+    jQuery('#modal_leaveReply').attr('data-comment-id', '');
+    jQuery('#modal_leaveReply').modal('hide');
+};
+
+var closeReplyOpenSuccess = function () {
+    closeReplyModal();
+    jQuery('#modal_commentSuccess').modal('show');
+    setTimeout(function() {
+        jQuery('#modal_commentSuccess').modal('hide');
+    }, 3000);
+    resetAndCloseCommentForm();
+    jQuery('.cancelComment').trigger('click');
+};
+
+var resetStars = function () {
+    jQuery('.star').removeClass('active');
+    jQuery('.rating-numeric').text('');
+}
+
+var resetAndCloseCommentForm = function () {
+    jQuery('.redactor-box').parents('.form-group:first').switchClass('', '-expander', 500, 'easeInCirc');
+    setTimeout(function () {
+        jQuery('#leaveReply')[0].reset();
+        jQuery('.redactor-box textarea').each(function () {
+            var r = jQuery(this).redactor('core.getObject');
+            r.code.set('');
+            r.placeholder.toggle();
+        });
+        setTimeout(function () {
+            var backToComment = jQuery(this).prop('data-return-to-comment');
+            if (backToComment) {
+                var backToComment = jQuery(this).prop('data-return-to-comment');
+                scrollToElement(jQuery('[data-edit-comment="' + backToComment + '"]').parents('.commentPost:first'));
+            }
+        }, 300);
+    }, 500);
+
+    jQuery('#submitComment').text('Créez');
+    toggleCommentIdInputField('x', 'x', 'delete');
+    resetStars();
+    grecaptcha.reset();
+
+};
+
+jQuery('#modal_leaveReply .-signIn, .-signUp').on('click', function (e) {
+    e.preventDefault();
+    closeReplyModal();
+});
+
+jQuery('#modal_leaveReply .-signNo').on('click', function (e) {
+    e.preventDefault();
+    closeReplyOpenSuccess();
+});
+
+jQuery('.cancelComment').on('click', function (e) {
+    resetAndCloseCommentForm();
+});
+
+jQuery('body').on('submit', '#leaveReply', function (e) {
+    e.preventDefault();
+
+    var clearErrors = function () {
+        jQuery('.has-error').removeClass('has-error').find('p.help-block.help-block-error').text('');
+    }
+
+    var triggerLoginModal = function (id) {
+        jQuery('#modal_leaveReply').modal('show').attr('data-comment-id', id);
+    }
+
+    var triggerSuccess = function () {
+        closeReplyOpenSuccess();
+    }
+
+    var disableButton = function () {
+        jQuery('#submitComment').attr('disabled', true);
+    }
+    var enableButton = function () {
+        jQuery('#submitComment').attr('disabled', false);
+    }
+
+    disableButton();
+    jQuery.ajax({
+        method: 'POST',
+        url: '/fr/ajax/comment?type=article&id=606#!',
+        data: jQuery(this).serialize(),
+        dataType: 'json',
+        success: function(ret) {
+            clearErrors();
+            if (ret.status == 'success') {
+                triggerSuccess();
+                resetAndCloseCommentForm();
+                jQuery('.cancelComment').trigger('click');
+                if (ret.edited) {
+                    jQuery.pjax.reload({container:'#commentsList', timeout: 2000});
+                }
+            } else if (ret.status == 'login') {
+                triggerLoginModal(ret.id);
+                grecaptcha.reset();
+            } else if (ret.status == 'error') {
+                jQuery.each(ret.errors, function (index, value) {
+                    jQuery('.field-' + index).addClass('has-error').find('p.help-block.help-block-error').text(value);
+                });
+            }
+            enableButton();
+        }
+    });
+
+});
+
+var toggleCommentIdInputField = function (value, id, action) {
+
+    var currentElement = jQuery('#hidden_comment_id');
+    var currentElementUpdate = jQuery('#hidden_comment_update');
+
+    if (currentElement && currentElementUpdate && action == 'delete') {
+        currentElement.remove();
+        currentElementUpdate.remove();
+    } else if (currentElement.length) {
+        currentElement.val(id);
+        currentElementUpdate.val(value);
+    } else {
+        jQuery('<input>').attr({
+            type: 'hidden',
+            name: 'comment_id',
+            id: 'hidden_comment_id',
+            value: id
+        }).appendTo('#leaveReply');
+
+        jQuery('<input>').attr({
+            type: 'hidden',
+            name: 'update_comment',
+            id: 'hidden_comment_update',
+            value: value
+        }).appendTo('#leaveReply');
+
+    }
+}
+
+var scrollToElement = function (element) {
+    jQuery('html, body').animate({
+        scrollTop: element.offset().top - 50
+    }, 500);
+};
+
+var populateFormDataAndOpenForm = function (data) {
+
+    jQuery.each(data, function (index, value) {
+        switch (index) {
+            case 'body':
+                jQuery('[name^="ArticleCommentForm[translation_active]"]').each(function () {
+                    if(jQuery(this).val()) {
+                        var txtArea = jQuery('#tsfr textarea');
+                        txtArea.parents('.redactor_editor_content:first').trigger('click');
+                        var r = txtArea.redactor('core.getObject');
+                        r.placeholder.toggle();
+                        r.code.set(value);
+                        r.focus.setEnd();
+                    }
+                });
+                break;
+            case 'rating':
+                jQuery('.star[data-star-rating="' + value + '"]').trigger('click');
+                break;
+            case 'recommendation':
+                jQuery(':radio[value="' + value + '"]').trigger('click');
+                break;
+            case 'id':
+                jQuery('#submitComment').text('Actualisez');
+                jQuery('.cancelComment').prop('data-return-to-comment', value);
+                break;
+            case 'update':
+                toggleCommentIdInputField(value, data.id);
+                break;
+        }
+
+    });
+
+    scrollToElement(jQuery('#leaveReply').parent());
+
+}
+
+jQuery('body').on('click', '[data-edit-comment]', function (e) {
+    e.preventDefault();
+
+    var getDetailsWithAjax = true;
+
+    if (getDetailsWithAjax) {
+        jQuery.ajax({
+            method: 'GET',
+            url: '/fr/ajax/get-comment?type=article#!',
+            data: {
+                id : jQuery(this).data('edit-comment')
+            },
+            dataType: 'json',
+            success: function(ret) {
+                if (ret.status == 'success') {
+                    populateFormDataAndOpenForm(ret.data);
+                }
+            }
+        });
+    }
+
+});
+
+jQuery('body').on('click', '[data-delete-comment]', function (e) {
+    e.preventDefault();
+
+    var getDetailsWithAjax = true;
+
+    if (confirm(jQuery(this).data('confirm-message'))) {
+        if (getDetailsWithAjax) {
+            jQuery.ajax({
+                method: 'GET',
+                url: '/fr/ajax/delete-comment#!',
+                data: {
+                    id : jQuery(this).data('delete-comment'),
+                    delete : true
+                },
+                dataType: 'json',
+                success: function(ret) {
+                    if (ret.status == 'success') {
+                        jQuery.pjax.reload({container:'#commentsList', timeout: 2000});
+                    }
+                }
+            });
+        }
+    }
+
+});
+
+
+
+        jQuery('body').on('click', '.star', function () {
+            var rating = jQuery(this).data('star-rating');
+            jQuery('.rating-numeric').removeClass('inactive');
+            jQuery('#articlecommentform-rating').val(rating);
+            jQuery(this).siblings('.star').removeClass('active');
+            jQuery(this).addClass('active').nextUntil().addClass('active');
+        });
+
+        jQuery('.star').hover(function () {
+            jQuery('.rating-numeric').html(jQuery(this).data('star-rating'));
+            jQuery(this).addClass('hovering').siblings('.star').addClass('hovering');
+        }, function () {
+            jQuery('.rating-numeric.inactive').html('');
+            var activeRating = jQuery('#articlecommentform-rating').val();
+            if (activeRating) {
+                jQuery('.rating-numeric').html(activeRating);
+            };
+            jQuery(this).removeClass('hovering').siblings('.star').removeClass('hovering');
+        });
+        
+jQuery('#w33').redactor({"changeCallback":function(html) {
+                                jQuery("#bodylength_2").text(this.$editor.text().length);
+                            },"placeholder":"Cliquez ici pour laisser votre commentaire…","focusCallback":function(e) {
+                            jQuery('.redactor-box').parents('.form-group:first')
+                              .switchClass('-expander', '', 500, 'easeInCirc');
+                          },"blurCallback":function(e) { },"lang":"fr"});
+jQuery('#termsModal').modal({"show":false});
+jQuery('#headerSearchQ').autocomplete();
+jQuery('#search-form').yiiActiveForm([], []);
+
+    $(document).ready(function() {
+        var openModalLogin = false;
+        if(openModalLogin)
+        {
+        	$('[data-open-login]').first().trigger('click');
+        }
+    });
+
+});</script>
+<script type="text/javascript">jQuery(window).on('load', function () {
+
+    jQuery(document).ready(function($) {
+        if ($('#preview_work_hours_frontend_606').length > 0) {
+            $('#article_work_hours_link_606').html('<a id="article-work-hours-trigger_606" data-article-work-hours-id="606">Heures de travail<i class="fa fa-external-link-square"></i></a>');
+        }
+
+        $('body').on('click', '#article-work-hours-trigger_606', function() {
+            $.ajax({
+                method: 'POST',
+                url: '/fr/article/view-article-work-hours',
+                data: {
+                    article: 606,
+                },
+                success: function(response) {
+                    var response = JSON.parse(response);
+                    if (response.status == 'success') {
+                        $('#preview_work_hours_frontend_606').find('table').html(response.view);
+                        $('#article-work-hours-modal_606').modal('show');
+                    }
+                }
+            });
+            return false;
+        });
+
+        var newsPos = 1;
+        $('.news-control').on('click', function() {
+            if (!$(this).is('.disabled')) {
+                if ($(this).is('.page')) {
+                    newsPos = parseInt($(this).data('page'));
+                } else if ($(this).is('.prev, .next')) {
+                    newsPos += $(this).is('.prev') ? -1 : 1;
+                }
+
+                $('.news-control').removeClass('disabled').removeClass('active');
+                $('.news-control[data-page=' + newsPos + ']').addClass('active');
+                if (newsPos <= 1) {
+                    $('.news-control.prev').addClass('disabled');
+                }
+                if (newsPos >= 0) {
+                    $('.news-control.next').addClass('disabled');
+                }
+
+                $('.news-item').each(function() {
+                    $(this)[$(this).is('[data-page=' + newsPos + ']') ? 'removeClass' : 'addClass']('hidden');
+                });
+            }
+        });
+    });
+
+
+    jQuery(document).ready(function($) {
+        var commentsPos = 1;
+        $('.comments-control').on('click', function() {
+            if (!$(this).is('.disabled')) {
+                if ($(this).is('.page')) {
+                    commentsPos = parseInt($(this).data('page'));
+                } else if ($(this).is('.prev, .next')) {
+                    commentsPos += $(this).is('.prev') ? -1 : 1;
+                }
+
+                $('.comments-control').removeClass('disabled').removeClass('active');
+                $('.comments-control[data-page=' + commentsPos + ']').addClass('active');
+                if (commentsPos <= 1) {
+                    $('.comments-control.prev').addClass('disabled');
+                }
+                if (commentsPos >= 0) {
+                    $('.comments-control.next').addClass('disabled');
+                }
+
+                $('.comment-item').each(function() {
+                    $(this)[$(this).is('[data-page=' + commentsPos + ']') ? 'removeClass' : 'addClass']('hidden');
+                });
+            }
+        });
+    });
+
+
+jQuery(document).ready(function($) {
+
+    $(document).on('click', '[data-terms-modal]', function (e) {
+        e.preventDefault();
+        var modal = $(this).data('modal');
+        $('#' + modal).modal('show');
+    });
+
+});
+
+});</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"531ab9c4ee","applicationID":"13953803","transactionName":"NlAGYhQFVhVUB0JaCQ8aMUQPS1EIUQFOHRYJRQ==","queueTime":0,"applicationTime":314,"atts":"GhcFFFwfRRs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
